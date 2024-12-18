@@ -336,7 +336,6 @@
             </div>
         </div>
     </div>
-    @include('sweetalert::alert')
     </main>
     <script type="text/javascript">
         $.ajaxSetup({
