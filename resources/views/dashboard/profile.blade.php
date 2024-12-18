@@ -1,19 +1,12 @@
-<x-admin-layout title="Profile | Sekawan">
-    <main class="xl:ml-68.5 mt-4 my-auto md:flex md:justify-center">
-        <div class="container mx-auto max-w-lg p-4 border-2 border-solid bg-white rounded-lg justify-center md:w-full">
-            <div class="break-words mb-4 bg-white border-0 border-solid rounded-[12px] bg-clip-border">
+<x-admin-layout title="Profil">
+    <main class="xl:ml-68.5 mt-4 my-auto md:flex md:justify-center mx-3" > 
+        <div class="container mx-auto max-w-lg p-4 border-2 border-solid bg-white rounded-lg justify-center md:w-full" style="background-color: #eef1ff;">
+            <div class="break-words mb-4 bg-white border-0 border-solid rounded-[12px] bg-clip-border" style="background-color: #eef1ff;">
                 <div class="w-full mx-auto p-2">
                     <div class="flex w-full">
-                        <div class="max-w-full px-1 mt-4 ml-0 text-center lg:mt-0 lg:w-1/8 lg:flex-none">
-                            <div class="h-18 bg-gradient-to-tl from-blue-600 to-blue-700 rounded-xl">
-                                <div class="flex items-center justify-center h-full">
-                                    <i class="fa-solid fa-user fa-2x px-3 py-3 text-white"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="max-w-full pt-4 px-3 lg:w-1/2 lg:flex lg:flex-none lg:pt-0">
+                        <div class="max-w-full px-4 lg:w-1/2 lg:flex lg:flex-none lg:pt-0">
                             <div class="flex h-full">
-                                <h3 class="font-bold text-2xl w-full">Profile</h3>
+                                <h3 class="font-bold text-2xl w-full">Profil</h3>
                             </div>
                         </div>
                     </div>
@@ -51,24 +44,33 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div>
-                                    <button type="submit" class="px-42 w-full py-2 mt-8 bg-blue-700 rounded-[12px] border-gray-500 text-xl text-semibold text-center text-white cursor-pointer hover:opacity-90 md:px-64" style="background-color: rgb(26 86 219)">
-                                        <div>
-                                            Ubah
-                                        </div>
-                                    </button>
-                                </div>
+                                <button type="submit" class="btn-save px-42 w-full py-2 mt-8 rounded-[12px] border-gray-500 text-xl text-semibold text-center text-white cursor-pointer md:px-64">
+                                    <div>
+                                        Simpan
+                                    </div>
+                                </button>
+                                
                             @endforeach
                         </form>
                         <div class="flex mx-auto">
                             <a href="/profile/password"
                                 class="px-auto mx-auto w-full py-2 mt-8 bg-orange-500 rounded-[12px] border-gray-500 text-xl text-semibold text-center text-white cursor-pointer hover:opacity-90 md:px-52">
-                                Ubah Password
+                                Edit Password
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        @include('sweetalert::alert')
+        <style>
+            .btn-save {
+                background-color: #aac4ff;
+                transition: background-color 0.3s;
+            }
+            .btn-save:hover {
+                background-color: #8ab8e0; 
+            }
+        </style>
+
+    </main>
 </x-admin-layout>
