@@ -6,6 +6,7 @@ use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\VehicleController;
+use App\Http\Controllers\LogActivityController;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Models\Role;
 
@@ -51,6 +52,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/transaksi', [TransactionController::class, 'create'])->name('transaksi');
     Route::post('/transaksi/store', [TransactionController::class, 'store']);
+
+    Route::resource('/logactivity', LogActivityController::class);
 
 });
 
