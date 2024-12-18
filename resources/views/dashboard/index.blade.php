@@ -8,7 +8,12 @@
                     {{ strtok($result, ' ') }}</h6>
             @endauth
         </nav>
+        <div class="container mt-12 p-8 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+            {!! $chart->container() !!}
+        </div>
         <div class="container mt-12 p-8 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100" style="background-color: #eef1ff;"> <!-- Tambahkan style ini -->
         </div>
     </main>
+    <script src="{{ $chart->cdn() }}"></script>
+    {{ $chart->script() }}
 </x-admin-layout>
